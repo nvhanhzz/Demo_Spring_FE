@@ -1,0 +1,47 @@
+.update-account-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+
+    .update-account-card {
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+
+        .ant-card-head {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #333;
+        }
+    }
+
+    form {
+        .ant-form-item {
+            margin-bottom: 16px;
+        }
+
+        .ant-form-item-label>label {
+            font-weight: 600;
+        }
+
+        .ant-btn-primary {
+            background-color: #52c41a; // Màu xanh lá cây cho nút "Save"
+            border-color: #52c41a;
+
+            &:hover {
+                background-color: #389e0d; // Màu tối hơn khi hover
+                border-color: #389e0d;
+            }
+        }
+
+        .ant-btn {
+            &+.ant-btn {
+                margin-left: 10px;
+            }
+        }
+
+        .ant-switch-checked {
+            background-color: #52c41a; // Xanh lá cây cho Switch khi đang "Active"
+        }
+    }
+}

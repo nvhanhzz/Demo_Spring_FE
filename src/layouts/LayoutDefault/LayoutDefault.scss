@@ -1,0 +1,31 @@
+.ant-layout {
+    height: 100vh; // Đảm bảo Layout chiếm toàn bộ chiều cao của viewport
+}
+
+/* Đảm bảo Sider và Content chiếm đúng chiều cao */
+.ant-layout-sider {
+    height: 100vh; // Sider chiếm 100% chiều cao của viewport
+}
+
+.ant-layout-content {
+    height: calc(100vh - 64px); // Trừ đi chiều cao của Header (64px)
+    overflow: auto; // Đảm bảo nội dung cuộn được khi cần
+}
+
+.ant-layout-header {
+    height: 64px; // Chiều cao của header, có thể thay đổi tùy ý
+}
+
+/* Đảm bảo rằng Layout con bên trong cũng chiếm chiều cao 100% */
+.ant-layout.ant-layout-has-sider {
+    height: 100vh; // Layout chứa Sider và Content cần toàn bộ chiều cao viewport
+}
+
+.demo-logo-vertical {
+    height: 64px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
