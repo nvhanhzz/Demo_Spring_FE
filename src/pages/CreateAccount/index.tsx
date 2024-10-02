@@ -20,15 +20,15 @@ const CreateAccount: React.FC = () => {
                 return;
             }
 
-            if (response.status === 201) {
-                // Thành công
+            const result = await response.json();
+
+            if (result.status === 201) {
                 message.success('Tạo mới tài khoản thành công!');
                 navigate('/account');
                 return;
             }
 
             // Các lỗi khác không phải 201 và không phải 403
-            const result = await response.json();
             throw new Error(result.message || 'Có lỗi xảy ra khi tạo tài khoản');
 
         } catch (error: any) {

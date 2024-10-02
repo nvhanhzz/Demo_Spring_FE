@@ -71,15 +71,12 @@ const UpdateAccountPage: React.FC = () => {
                 message.error('Bạn không đủ quyền để cập nhật tài khoản này.');
                 return;
             }
-
-            if (!response.ok) {
-                const result = await response.json();
+            const result = await response.json();
+            if (!response.ok || result.status !== 202) {
                 throw new Error(result.message || 'Có lỗi xảy ra khi cập nhật tài khoản');
             }
 
-            // Cập nhật thành công
             message.success('Cập nhật tài khoản thành công!');
-            navigate('/account');
         } catch (error: any) {
             if (error instanceof Error) {
                 message.error(error.message);
